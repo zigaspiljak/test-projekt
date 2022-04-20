@@ -1,0 +1,88 @@
+{
+  "users": [
+    {
+      "name": "ziga",
+      "email": "ziga@gmail.com",
+      "password": "12345",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "name": "spiljak",
+      "email": "spiljak@gmail.com",
+      "password": "ziga",
+      "role": "admin",
+      "id": 2
+    },
+    {
+      "name": "ziga",
+      "email": "spiljak2@gmail.com",
+      "password": "ziga",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "name": "user",
+      "email": "ziga",
+      "password": "user",
+      "role": "user",
+      "id": 4
+    }
+  ],
+  "projects": [
+    {
+      "name": "projekt1",
+      "timestamp": "April 20th 2022, 9:40:53 pm",
+      "posts": [
+        {
+          "post": "test1",
+          "timestamp": "April 20th 2022, 9:40:57 pm",
+          "id": "005ccf71-0f25-4761-8cb8-9c8e6642deb5"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "projekt2",
+      "timestamp": "April 20th 2022, 9:41:06 pm",
+      "posts": [
+        {
+          "post": "aaa",
+          "timestamp": "April 20th 2022, 9:43:55 pm",
+          "id": "11ade144-30f7-4095-b325-03954c97c196"
+        },
+        {
+          "post": "asd",
+          "timestamp": "April 20th 2022, 9:43:44 pm",
+          "id": "747e96c2-2d3e-4e0a-a646-ea26246ada97"
+        },
+        {
+          "post": "123",
+          "timestamp": "April 20th 2022, 9:43:24 pm",
+          "id": "852e4e07-9749-44d2-8377-5b8f91ebd375"
+        },
+        {
+          "post": "123",
+          "timestamp": "April 20th 2022, 9:43:17 pm",
+          "id": "b95f2430-f2d7-4b50-8218-a9bb89687f73"
+        },
+        {
+          "post": "aaa",
+          "timestamp": "April 20th 2022, 9:42:20 pm",
+          "id": "eff52dd3-00f4-43fc-bee1-cb4983bccf1d"
+        },
+        {
+          "post": "test3",
+          "timestamp": "April 20th 2022, 9:41:49 pm",
+          "id": "02ed58e3-9275-4167-b04c-e9b223826d55"
+        },
+        {
+          "post": "test2",
+          "timestamp": "April 20th 2022, 9:41:11 pm",
+          "id": "f620f8d8-f3a9-49b6-8c03-101c3390124f"
+        }
+      ],
+      "id": 2
+    }
+  ]
+}
