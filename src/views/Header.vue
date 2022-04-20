@@ -30,6 +30,7 @@ export default {
       } else {
         localStorage.clear();
         this.$router.push({ name: "login" });
+        console.log("test")
       }
     },
   },
