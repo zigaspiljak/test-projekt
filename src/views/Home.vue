@@ -11,10 +11,10 @@
       <button v-on:click="deleteProject(project.id)">Izbriši</button>
     </div>
   </div>
-  <div>
+  <!-- <div>
     <p>Število projektov = {{count}}</p>
     <button v-on:click="counting()">Osveži statistiko</button>
-  </div>
+  </div> -->
 
 </template>
 
@@ -100,7 +100,6 @@ table {
   margin-left: auto;
   margin-right: auto;
   margin-top: 150px;
-  border: 1px solid;
 }
 
 .list input {

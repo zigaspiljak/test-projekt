@@ -1,22 +1,31 @@
 <template>
   <Header />
-  <h1>{{ posts.name }}</h1>
-  <table class="projekt-zapis" v-if="posts">
-    <thead>
-      <tr>
-        <th>Sporočilo</th>
-        <th>Čas zapisa</th>
-      </tr>
-    </thead>
-    <tbody>
+  <div class="zapis">
+    <h1>{{ posts.name }}</h1>
+    <br />
+    <table class="projekt-zapis" v-if="posts">
+      <thead>
+        <tr>
+          <th>Sporočilo</th>
+          <th>Čas zapisa</th>
+        </tr>
+      </thead>
+      <tbody>
         <tr v-for="(post, index) in posts.posts" :key="index">
           <td>{{ post.post }}</td>
           <td>{{ post.timestamp }}</td>
         </tr>
-    </tbody>
-  </table>
-  <input type="text" name="post" placeholder="Besedilo..." v-model="postName" />
-  <button v-on:click="addPost()">Pošlji</button>
+      </tbody>
+    </table>
+    <br />
+    <input
+      type="text"
+      name="post"
+      placeholder="Sporočilo..."
+      v-model="postName"
+    />
+    <button class="button-send" v-on:click="addPost()">Pošlji</button>
+  </div>
 </template>
 <script>
 import Header from "./Header.vue";
@@ -45,10 +54,10 @@ export default {
 
   created: async function () {
     const result = await axios.get(
-     "http://localhost:3000/projects/" + this.$route.params.Pid
-    )
-    this.posts = result.data
-    },
+      "http://localhost:3000/projects/" + this.$route.params.Pid
+    );
+    this.posts = result.data;
+  },
 
   methods: {
     async addPost() {
@@ -100,14 +109,41 @@ export default {
 <style>
 .projekt-zapis {
   width: 70%;
-  border: 1px solid;
   border-radius: 5px;
 }
 
-.right{
-    float: right;
+.right {
+  float: right;
 }
 
+.zapis {
+  width: 600px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+}
 
+.zapis input {
+  width: 300px;
+  height: 40px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid skyblue;
+  border-radius: 30px;
+}
 
+.zapis button{
+    width: 80px;
+    height: 40px;
+  margin-top: -38px;
+  margin-left: 20px;
+  border: 1px solid skyblue;
+  background: skyblue;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+}
 </style>
