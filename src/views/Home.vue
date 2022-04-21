@@ -22,7 +22,6 @@
 <script>
 import Header from "./Header.vue";
 import axios from "axios";
-import moment from "moment";
 
 
 export default {
@@ -56,7 +55,6 @@ export default {
     },
      counting(){
       this.count = this.projects.length
-      console.log(moment())
     },
     izberiProjekt(id) {
     this.$router.push({name:'details', params:{Pid:id}})

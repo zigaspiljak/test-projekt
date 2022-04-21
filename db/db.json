@@ -88,6 +88,18 @@
         }
       ],
       "id": 2
+    },
+    {
+      "name": "projekt3",
+      "timestamp": "April 21st 2022, 7:42:01 am",
+      "posts": [
+        {
+          "post": "test sporocila za projekt 3",
+          "timestamp": "April 21st 2022, 7:42:20 am",
+          "id": "a1fa67cd-5cb2-478c-b615-d01612c3702a"
+        }
+      ],
+      "id": 3
     }
   ]
 }

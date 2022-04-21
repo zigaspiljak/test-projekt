@@ -18,12 +18,7 @@
       </tbody>
     </table>
     <br />
-    <input
-      type="text"
-      name="post"
-      placeholder="Sporočilo..."
-      v-model="postName"
-    />
+    <input type="text" name="post" placeholder="Sporočilo..." v-model="postName"/>
     <button class="button-send" v-on:click="addPost()">Pošlji</button>
   </div>
 </template>
@@ -37,13 +32,6 @@ export default {
   name: "details",
   data() {
     return {
-      //     posts: {
-      //     post: "",
-      //     timestamp: moment().format('MMMM Do YYYY, h:mm:ss a'),
-      //    },
-      //     id: this.$route.params.Pid,
-      //     projects: {},
-      //     users: { name: ""}4
       posts: {},
       postName: "",
     };
@@ -64,8 +52,7 @@ export default {
       if (!this.postName.length) {
         return;
       }
-      await axios
-        .patch("http://localhost:3000/projects/" + this.$route.params.Pid, {
+      await axios.patch("http://localhost:3000/projects/" + this.$route.params.Pid, {
           posts: [
             {
               post: this.postName,
@@ -98,11 +85,6 @@ export default {
       this.$router.push({ name: "login" });
     }
   },
-  //   computed: {
-  //     filterByTerm() {
-  //       return this.projects.filter((project) => project.id === this.$route.params.Pid )
-  //   }
-  //   },
 };
 </script>
 
@@ -135,9 +117,9 @@ export default {
   border-radius: 30px;
 }
 
-.zapis button{
-    width: 80px;
-    height: 40px;
+.zapis button {
+  width: 80px;
+  height: 40px;
   margin-top: -38px;
   margin-left: 20px;
   border: 1px solid skyblue;

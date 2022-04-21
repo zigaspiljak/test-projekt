@@ -46,8 +46,6 @@ const router = createRouter({
 
 router.beforeEach((to, from) => {
   const user = JSON.parse(localStorage.getItem("user-info"))
-  // const allowedUsers = 
-  console.log(to, from)
   if(to.meta.isAdmin)
   {
     return(user.role === "admin")
