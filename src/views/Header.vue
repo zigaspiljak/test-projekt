@@ -18,7 +18,6 @@ export default {
   created: async function () {
     const result = JSON.parse(localStorage.getItem("user-info"))
     this.isAdmin = result.role === "admin"
-    console.log(result.role)
   },
 
   name: "Header",

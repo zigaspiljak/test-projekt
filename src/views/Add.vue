@@ -44,7 +44,6 @@ export default {
     Header,
   },
   async mounted() {
-     this.date = this.getDate();
     this.timestamp = this.getTimestamp();
     let user = localStorage.getItem("user-info");
     if (!user) {
